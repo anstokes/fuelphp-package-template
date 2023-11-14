@@ -1,12 +1,15 @@
 	<!-- Start of Queued Javascript -->
 	{{#scripts}}
-		{{#url}}
-			<script type="text/javascript" src="{{url}}"></script>
-		{{/url}}
+		{{#raw}}
+			{{{ . }}}
+		{{/raw}}
 		{{#script}}
 		<script type="text/javascript">
 			{{script}}
 		</script>
 		{{/script}}
+		{{#url}}
+			<script type="text/javascript" src="{{url}}"></script>
+		{{/url}}
 	{{/scripts}}
 	<!-- End of Queued Javascript -->
